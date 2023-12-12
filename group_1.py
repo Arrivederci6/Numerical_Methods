@@ -15,7 +15,7 @@ def newton (x0, tol, maxiter):
     x = x0
     for i in range (maxiter):
         F, J = f (x)
-        dx = np.linalg.solve (J, -F) # Розв'язуємо систему J * dx = -F
+        dx = np.linalg.solve (J, -F) # Розв'язуємо систему J * dx = -, знаходимо приріст
         x = x + dx # Оновлюємо наближення
         if np.linalg.norm (dx) < tol: # Перевіряємо умову зупинки
             break
